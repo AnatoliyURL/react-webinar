@@ -80,6 +80,22 @@ class Store {
       })
     });
   }
+
+  /**
+   * Добавить клик записи по её коду
+   * @param code
+   */
+  clickItem(code) {
+    this.setState({
+      items: this.state.items.map(item => {
+        if (item.code === code){
+          item.click = ++item.click;
+        }
+
+        return item;
+      })
+    });
+  }
 }
 
 export default Store;
