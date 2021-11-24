@@ -89,7 +89,7 @@ class Store {
     this.setState({
       items: this.state.items.map(item => {
         if (item.code === code){
-          item.click = ++item.click;
+          item.selected ? item.click = ++item.click :  item.click
         }
 
         return item;
